@@ -1,0 +1,153 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = E$:\D\IAR\common\bin\XclFileGenerator.exe $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in+++E$:\D\IAR\common\bin\XclFileGenerator.exe $flags
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = E$:\D\IAR\common\bin\SourceIndexer.exe $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out+++E$:\D\IAR\common\bin\SourceIndexer.exe $flags
+
+rule MAKEBROWSE
+  command = E$:\D\IAR\common\bin\makeBrowseData.exe $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out+++E$:\D\IAR\common\bin\makeBrowseData.exe $flags
+
+rule PDBLINK
+  command = E$:\D\IAR\common\bin\PbdLink.exe $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out+++E$:\D\IAR\common\bin\PbdLink.exe $flags
+
+
+
+#Build steps
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\asw\CDD_SWC_1.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\asw\CDD_SWC_1.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\asw\Decision_SWC.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\asw\Decision_SWC.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\bsw\Dio.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\bsw\Dio.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\bsw\Dio_LCfg.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\bsw\Dio_LCfg.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\init.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\init.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\main.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\main.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\bsw\port.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\bsw\port.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\bsw\Port_LCfg.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\bsw\Port_LCfg.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\asw\Read_Data_SWC.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\asw\Read_Data_SWC.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\rte\Rte.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\rte\Rte.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.xcl : COMPILER_XCL 
+  xclcommand = -source_file E$:\Embedded\Tasks\TrainingProject4\startup_ewarm.c -xcl_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.xcl -macro_file E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.tmp -icc_path E$:\D\IAR\arm\bin\iccarm.exe
+  flags = E$:\Embedded\Tasks\TrainingProject4\startup_ewarm.c -D ewarm -D PART_TM4C123GH6PM -D TARGET_IS_TM4C123_RB1 -o E$:\Embedded\Tasks\TrainingProject4\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config E$:\D\IAR\arm\inc\c\DLib_Config_Normal.h -I "E$:\D\Semester$ fall$ 2022\Embedded\Lab$ tasks\tivaware\\" -Ol --predef_macros E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.tmp
+  rspfile_name = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.xcl.rsp
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\asw\CDD_SWC_1.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\asw\Decision_SWC.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\bsw\Dio.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\bsw\Dio_LCfg.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\init.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\main.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\bsw\port.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\bsw\Port_LCfg.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\asw\Read_Data_SWC.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\rte\Rte.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.pbi : INDEXER E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.xcl |  $
+E$:\Embedded\Tasks\TrainingProject4\startup_ewarm.c
+  flags = -out=E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.pbi -f E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.xcl
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace.pbw : MAKEBROWSE E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace.pbd
+  flags = E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace.pbd -output E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace.pbw
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part0.pbi : PDBLINK E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.pbi |  $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.pbi $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.pbi
+  flags = -M E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part0.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\CDD_SWC_1.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Decision_SWC.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio.pbi
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part1.pbi : PDBLINK E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.pbi |  $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.pbi $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.pbi
+  flags = -M E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part1.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Dio_LCfg.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\init.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\main.pbi
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part2.pbi : PDBLINK E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.pbi |  $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.pbi $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.pbi
+  flags = -M E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part2.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\port.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Port_LCfg.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Read_Data_SWC.pbi
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part3.pbi : PDBLINK E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.pbi |  $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.pbi
+  flags = -M E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part3.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\Rte.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.pbi
+
+build E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace.pbd : PDBLINK E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part0.pbi |  $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part1.pbi $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part2.pbi $
+E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part3.pbi
+  flags = -M E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace.pbd E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part0.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part1.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part2.pbi E$:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\workspace_part3.pbi
+

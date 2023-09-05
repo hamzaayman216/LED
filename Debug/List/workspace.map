@@ -1,0 +1,252 @@
+###############################################################################
+#
+# IAR ELF Linker V9.30.1.335/W64 for ARM                  03/Sep/2023  18:57:59
+# Copyright 2007-2022 IAR Systems AB.
+#
+#    Output file  =  E:\Embedded\Tasks\TrainingProject4\Debug\Exe\workspace.out
+#    Map file     =
+#        E:\Embedded\Tasks\TrainingProject4\Debug\List\workspace.map
+#    Command line =
+#        -f E:\Embedded\Tasks\TrainingProject4\Debug\Exe\workspace.out.rsp
+#        (E:\Embedded\Tasks\TrainingProject4\Debug\Obj\CDD_SWC_1.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\Decision_SWC.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\Dio.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\Dio_LCfg.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\init.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\main.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\port.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\Port_LCfg.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\Read_Data_SWC.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\Rte.o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Obj\startup_ewarm.o
+#        --no_out_extension -o
+#        E:\Embedded\Tasks\TrainingProject4\Debug\Exe\workspace.out --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        E:\Embedded\Tasks\TrainingProject4\Debug\List\workspace.map --config
+#        E:\D\IAR\arm/config/linker/TexasInstruments/TM4C123GH6.icf
+#        --semihosting "E:\D\Semester fall 2022\Embedded\Lab
+#        tasks\tivaware\driverlib\ewarm\Exe\driverlib.a" --entry
+#        __iar_program_start --vfe --text_out locale --cpu=Cortex-M4
+#        --fpu=VFPv4_sp)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__CPP_Runtime   = 1
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because --advanced_heap
+was not specified and the application did not appear to
+be primarily optimized for speed.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+do not initialize { rw section .noinit };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                      0x26c
+  .intvec            const            0x0  0x26c  startup_ewarm.o [1]
+                                  - 0x26c  0x26c
+
+"P1":                                      0x561
+  .text              ro code        0x26c  0x1d0  port.o [1]
+  .text              ro code        0x43c   0x84  Dio.o [1]
+  .text              ro code        0x4c0   0x7e  lz77_init_single.o [4]
+  .text              ro code        0x53e   0x46  Read_Data_SWC.o [1]
+  .text              ro code        0x584   0x2c  CDD_SWC_1.o [1]
+  .text              ro code        0x5b0   0x18  Rte.o [1]
+  .text              ro code        0x5c8   0x34  main.o [1]
+  .text              ro code        0x5fc   0x18  init.o [1]
+  .text              ro code        0x614   0x28  Decision_SWC.o [1]
+  .text              ro code        0x63c   0x28  data_init.o [4]
+  .text              ro code        0x664   0x22  fpinit_M.o [3]
+  .iar.init_table    const          0x688   0x10  - Linker created -
+  .text              ro code        0x698   0x1e  startup_ewarm.o [1]
+  .text              ro code        0x6b8   0x1c  cstartup_M.o [4]
+  .text              ro code        0x6d4   0x1e  cmain.o [4]
+  .text              ro code        0x6f2    0x4  low_level_init.o [2]
+  .text              ro code        0x6f6    0x4  exit.o [2]
+  .text              ro code        0x6fc    0xa  cexit.o [4]
+  .text              ro code        0x708   0x14  exit.o [5]
+  .rodata            const          0x71c    0x0  lz77_init_single.o [4]
+  Initializer bytes  const          0x71c   0xb1  <for P2-1>
+                                  - 0x7cd  0x561
+
+"P2", part 1 of 2:                         0x186
+  P2-1                        0x2000'0000  0x186  <Init block>
+    .data            inited   0x2000'0000  0x180  Port_LCfg.o [1]
+    .bss             inited   0x2000'0180    0x4  main.o [1]
+    .bss             inited   0x2000'0184    0x1  Rte.o [1]
+    .bss             inited   0x2000'0185    0x1  Rte.o [1]
+                            - 0x2000'0186  0x186
+
+"P2", part 2 of 2:                         0x100
+  .noinit            uninit   0x2000'0188  0x100  startup_ewarm.o [1]
+                            - 0x2000'0288  0x100
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x7cd     0x3'ffff  0x3'f833
+  0x2000'0186  0x2000'0187       0x2
+  0x2000'0288  0x2000'7fff    0x7d78
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy/lz77 (__iar_lz77_init_single3)
+    1 source range, total size 0xb1 (45% of destination):
+                0x71c   0xb1
+    1 destination range, total size 0x186:
+          0x2000'0000  0x186
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data
+    ------              -------  -------  -------
+command line/config:
+    ---------------------------------------------
+    Total:
+
+E:\Embedded\Tasks\TrainingProject4\Debug\Obj: [1]
+    CDD_SWC_1.o              44
+    Decision_SWC.o           40
+    Dio.o                   132
+    Port_LCfg.o                      174      384
+    Read_Data_SWC.o          70
+    Rte.o                    24        1        2
+    init.o                   24
+    main.o                   52        2        4
+    port.o                  464
+    startup_ewarm.o          30      620      256
+    ---------------------------------------------
+    Total:                  880      797      646
+
+dl7M_tln.a: [2]
+    exit.o                    4
+    low_level_init.o          4
+    ---------------------------------------------
+    Total:                    8
+
+m7M_tls.a: [3]
+    fpinit_M.o               34
+    ---------------------------------------------
+    Total:                   34
+
+rt7M_tl.a: [4]
+    cexit.o                  10
+    cmain.o                  30
+    cstartup_M.o             28
+    data_init.o              40
+    lz77_init_single.o      126
+    ---------------------------------------------
+    Total:                  234
+
+shb_l.a: [5]
+    exit.o                   20
+    ---------------------------------------------
+    Total:                   20
+
+    Gaps                      6        2
+    Linker created                    16
+-------------------------------------------------
+    Grand Total:          1'182      815      646
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x688          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x698          --   Gb  - Linker created -
+?main                         0x6d5         Code  Gb  cmain.o [4]
+CDD_SWC_1_Runnable_read_1
+                              0x585   0x10  Code  Gb  CDD_SWC_1.o [1]
+CDD_SWC_1_Runnable_update_2
+                              0x595   0x16  Code  Gb  CDD_SWC_1.o [1]
+Decision_SWC_Runnable_1
+                              0x615   0x28  Code  Gb  Decision_SWC.o [1]
+Dio_ReadPort                  0x43d   0x36  Code  Gb  Dio.o [1]
+Dio_WritePort                 0x473   0x34  Code  Gb  Dio.o [1]
+FaultISR                      0x6b3    0x2  Code  Lc  startup_ewarm.o [1]
+IntDefaultHandler             0x6b5    0x2  Code  Lc  startup_ewarm.o [1]
+NmiSR                         0x6b1    0x2  Code  Lc  startup_ewarm.o [1]
+PortPin                 0x2000'0000  0x180  Data  Gb  Port_LCfg.o [1]
+Port_Init                     0x26d  0x1d0  Code  Gb  port.o [1]
+Read_Data_SWC_Runnable_1
+                              0x53f   0x46  Code  Gb  Read_Data_SWC.o [1]
+Region$$Table$$Base           0x688          --   Gb  - Linker created -
+Region$$Table$$Limit          0x698          --   Gb  - Linker created -
+ResetISR                      0x699   0x12  Code  Gb  startup_ewarm.o [1]
+Rte_Write_read_application_swc_composition_sender_sendOrder_Element_1_isClockWise
+                              0x5b1    0x8  Code  Gb  Rte.o [1]
+Rte_Write_read_application_swc_composition_sender_sendOrder_Element_2_readData
+                              0x5b9    0x8  Code  Gb  Rte.o [1]
+__cmain                       0x6d5         Code  Gb  cmain.o [4]
+__exit                        0x709   0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0x63d   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0x665         Code  Gb  fpinit_M.o [3]
+__iar_lz77_init_single3
+                              0x4c1   0x7e  Code  Gb  lz77_init_single.o [4]
+__iar_program_start           0x6b9         Code  Gb  cstartup_M.o [4]
+__low_level_init              0x6f3    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0  0x26c  Data  Gb  startup_ewarm.o [1]
+_call_main                    0x6e1         Code  Gb  cmain.o [4]
+_exit                         0x6fd         Code  Gb  cexit.o [4]
+exit                          0x6f7    0x4  Code  Gb  exit.o [2]
+initialize_system_systick
+                              0x5fd   0x18  Code  Gb  init.o [1]
+main                          0x5c9    0x8  Code  Gb  main.o [1]
+mario                         0x5d1   0x28  Code  Gb  main.o [1]
+mario::count            0x2000'0180    0x4  Data  Lc  main.o [1]
+pui32Stack              0x2000'0188  0x100  Data  Lc  startup_ewarm.o [1]
+read_application_swc_composition_sender_sendOrder_Element_1_isClockWise
+                        0x2000'0184    0x1  Data  Gb  Rte.o [1]
+read_application_swc_composition_sender_sendOrder_Element_2_readData
+                        0x2000'0185    0x1  Data  Gb  Rte.o [1]
+
+
+[1] = E:\Embedded\Tasks\TrainingProject4\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1'182 bytes of readonly  code memory
+    815 bytes of readonly  data memory
+    646 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

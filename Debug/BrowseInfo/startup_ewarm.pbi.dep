@@ -1,0 +1,8 @@
+E:\Embedded\Tasks\TrainingProject4\Debug\BrowseInfo\startup_ewarm.pbi: \
+  E:\Embedded\Tasks\TrainingProject4\startup_ewarm.c \
+  E:\D\IAR\arm\inc\c\stdint.h E:\D\IAR\arm\inc\c\ycheck.h \
+  E:\D\IAR\arm\inc\c\yvals.h E:\D\IAR\arm\inc\c\DLib_Defaults.h \
+  E:\D\IAR\arm\inc\c\DLib_Config_Normal.h \
+  E:\D\IAR\arm\inc\c\DLib_Product.h \
+  E:\D\Semester\ fall\ 2022\Embedded\Lab\ tasks\tivaware\inc\hw_nvic.h \
+  E:\D\Semester\ fall\ 2022\Embedded\Lab\ tasks\tivaware\inc\hw_types.h
