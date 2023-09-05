@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>3915546646</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\asw\Read_Data_SWC.c</file>
+            <file>$PROJ_DIR$\asw\Decision_SWC.c</file>
+            <file>$PROJ_DIR$\init.c</file>
+            <file>$PROJ_DIR$\init.h</file>
+            <file>$PROJ_DIR$\bsw\Dio.h</file>
+            <file>$PROJ_DIR$\macros.h</file>
+            <file>$PROJ_DIR$\bsw\port.c</file>
+            <file>$PROJ_DIR$\bsw\Port_LCfg.h</file>
+            <file>$PROJ_DIR$\bsw\Dio.c</file>
+            <file>$PROJ_DIR$\bsw\Port_Cfg.h</file>
+            <file>$PROJ_DIR$\bsw\Dio_Cfg.h</file>
+            <file>$PROJ_DIR$\bsw\Dio_Types.h</file>
+            <file>$PROJ_DIR$\bsw\Dio_LCfg.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\bsw\Port_LCfg.c</file>
+            <file>$PROJ_DIR$\bsw\Port_Types.h</file>
+            <file>$PROJ_DIR$\asw\CDD_SWC_1.c</file>
+            <file>$PROJ_DIR$\bsw\Dio_LCfg.h</file>
+            <file>$PROJ_DIR$\bsw\port.h</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\bsw\Dio_LCfg.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\Read_Data_SWC.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\init.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+            <file>$PROJ_DIR$\rte\Rte.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\TrainingProject\macros.h</file>
+            <file>$PROJ_DIR$\..\..\..\D\Semester fall 2022\Embedded\Lab tasks\tivaware\inc\hw_nvic.h</file>
+            <file>$PROJ_DIR$\rte\Rte_CDD_SWC_1.h</file>
+            <file>$PROJ_DIR$\rte\Rte_Read_Data_SWC.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_ewarm.o</file>
+            <file>$PROJ_DIR$\..\..\..\D\Semester fall 2022\Embedded\Lab tasks\tivaware\inc\hw_types.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Decision_SWC.o</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\rte\Std_Types.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\rte\Rte_Type.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\CDD_SWC_1.o</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\rte\Rte.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tls.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\rte\Rte_Read_Data_SWC.h</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\rte\Rte_CDD_SWC_1.h</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\rte\Rte_Decision_SWC.h</file>
+            <file>$PROJ_DIR$\rte\Rte.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Port_LCfg.o</file>
+            <file>$PROJ_DIR$\rte\Std_Types.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Rte.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Dio.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Dio_LCfg.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\workspace.out</file>
+            <file>$PROJ_DIR$\..\TrainingProject\tm4c123gh6pm.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\rte\Rte_Decision_SWC.h</file>
+            <file>$PROJ_DIR$\tm4c123gh6pm.h</file>
+            <file>$PROJ_DIR$\startup_ewarm.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\port.o</file>
+            <file>$PROJ_DIR$\Debug\List\workspace.map</file>
+            <file>$PROJ_DIR$\asw\Decision_SWC.h</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\bsw\Port_Types.h</file>
+            <file>$PROJ_DIR$\asw\Read_Data_SWC.h</file>
+            <file>$PROJ_DIR$\..\..\..\D\Semester fall 2022\Embedded\Lab tasks\tivaware\driverlib\ewarm\Exe\driverlib.a</file>
+            <file>$PROJ_DIR$\rte\Rte_Type.h</file>
+            <file>$PROJ_DIR$\..\TrainingProject3\bsw\Dio_Types.h</file>
+        </outputs>
+        <file>
+            <name>$PROJ_DIR$\asw\Read_Data_SWC.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 44 41 39 36 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\asw\Decision_SWC.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 41 39 36 26</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\init.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 22</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsw\port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 61</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 18 59 15 36 7 64 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsw\Dio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 4 53 34 38 37 56 23 57 55 5 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsw\Dio_LCfg.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 52</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 19 68 36</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 65 63 3 18 59 15 36 7 64</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\bsw\Port_LCfg.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 48</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 7 64 36</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\asw\CDD_SWC_1.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45 41 39 36 7 64 18 59 15 4 53 34 38 37 56 23 57 55 5</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 54 62</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\rte\Rte.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 67 49</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\workspace.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 62</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 35 40 32 51 52 22 43 61 48 21 50 30 66 20 25 42 33</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34 38 37 56 23 57 27 31</file>
+                </tool>
+            </inputs>
+        </file>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\asw\Read_Data_SWC.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\asw\Decision_SWC.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\init.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\bsw\port.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\bsw\Dio_LCfg.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\main.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\bsw\Port_LCfg.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\asw\CDD_SWC_1.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>$PROJ_DIR$\rte\Rte.c</name>
+            <tool>ICCARM</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>
